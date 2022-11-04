@@ -51,3 +51,15 @@ REFERENCES "category" ("category_id");
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
 REFERENCES "subcategory" ("subcategory_id");
+
+CREATE TABLE "backers" (
+    "backer_id" varchar(10)   NOT NULL,
+    "cf_id" varchar(50)   NOT NULL,
+	"first_name" varchar(50)   NOT NULL,
+	"last_name" varchar(50)   NOT NULL,
+	"email" varchar(100)   NOT NULL,
+	CONSTRAINT "pk_backer_id" PRIMARY KEY (
+        "backer_id"
+     )
+);
+SELECT * from campaign
